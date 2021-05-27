@@ -8,7 +8,6 @@ const rate = document.querySelector('#rate');
 const pitch = document.querySelector('#pitch');
 const rateValue = document.querySelector('#rate-value');
 const pitchValue = document.querySelector('#pitch-value'); 
-const submitBtn = document.querySelector('#submit');
 
 //init the voices array
 let voices = [];
@@ -56,11 +55,11 @@ const speak = () => {
         }
         //speak error
         speakText.onerror = e =>{
-            console.log('spmething went wrong');
+            console.log('something went wrong');
         }
 
         //selected voice
-        const selectedVoice = voiceSelect.selectedOption[0].getAttribute('data-name');
+        const selectedVoice = voiceSelect.selectedOptions[0].getAttribute('data-name');
 
         //loop through voices
         voices.forEach(voice => {
