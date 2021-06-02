@@ -113,15 +113,32 @@ body {
 
     #talk{
         position: relative;
-        top: 25rem;
+        top: 30rem;
         left: 40%;
     }
 
     .content{
         color: white;
         position: relative;
-        left: 25%;
+        left: 45%;
         width: 50%;
     }
+
+    .bot{
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        top: 15%;
+        animation: bots infinite ease-in-out 4s;
+    }
   
+    @keyframes bots {
+        50%{
+            transform: translateY(50px);
+        }
+        50%{
+            transition-delay: 5s;
+            transform: translateY(-40px);
+        }
+    }
   
