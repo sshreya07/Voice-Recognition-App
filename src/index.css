@@ -2,7 +2,7 @@ body {
     margin: 0px;
     padding: 0px;
     box-sizing: content-box;
-    background-image: url("../images/Img3.jpg");
+    background-image: url("../images/BG.jpg");
     z-index: -2;
     
   }
@@ -110,5 +110,18 @@ body {
       z-index: 1;
       padding: 1rem;
   }
+
+    #talk{
+        position: relative;
+        top: 25rem;
+        left: 40%;
+    }
+
+    .content{
+        color: white;
+        position: relative;
+        left: 25%;
+        width: 50%;
+    }
   
   
