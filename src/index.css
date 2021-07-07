@@ -8,8 +8,6 @@ body {
   }
 
   .homeDIV{
-    position: absolute;
-    left: 25%;
     text-align: center;
   }
 
@@ -22,7 +20,7 @@ body {
   }
 
   .homeBtn{
-      padding: 3rem 7rem ;
+      padding: 3rem 5rem ;
   }
   
   .navbar{
@@ -111,7 +109,7 @@ body {
       padding: 10px;
   }
   
-  #main #logo{
+  #main .logo{
       border-radius: 25%;
       width: 6rem;
       height: 6rem;
