@@ -2,7 +2,7 @@
 
 // voice html page working
 
-const btn = document.querySelector('#talk');
+const btn = document.querySelector('.talkBtn');
 const content = document.querySelector('.content');
 const SpokenText = document.querySelector('.spokenText');
 
@@ -11,7 +11,7 @@ const hi =[
 ]
 
 const greeting = [
-    'I am good how you doin',
+    'I am good! how you doin',
     'I am great, what about you'
 ];
 

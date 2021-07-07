@@ -4,6 +4,7 @@ body {
     box-sizing: content-box;
     background-image: url("../images/BG.jpg");
     z-index: -2;
+    overflow-x: hidden;
     
   }
 
@@ -13,6 +14,11 @@ body {
 
   .img{
     animation: bots infinite ease-in-out 4s;
+  }
+
+  .img #bot{
+    width: 500px;
+    height: 500px;
   }
 
   .homeDIV a{
@@ -127,10 +133,22 @@ body {
       padding: 1rem;
   }
 
-    #talk{
+    .talkBtn{
         position: relative;
-        top: 30rem;
-        left: 40%;
+        top: 25rem;
+        left: 60%;
+        animation: recognizeBtn infinite ease-in-out 4s;
+    }
+
+    .talkBtn:hover{
+        transform: scale(1.05);
+        transition: 0.8s;
+    }
+
+    .talk{
+        border-radius: 50%; 
+        width: 13rem; 
+        height: 13rem;
     }
 
     .content{
@@ -140,10 +158,10 @@ body {
         width: 50%;
     }
 
-    .bot{
+    #voiceBot{
         position: absolute;
-        width: 5rem;
-        height: 5rem;
+        width: 30rem;
+        height: 30rem;
         top: 15%;
         animation: bots infinite ease-in-out 4s;
     }
@@ -157,4 +175,82 @@ body {
             transform: translateY(-40px);
         }
     }
+
+    @keyframes recognizeBtn {
+        100%{
+            transform: rotate(360deg);
+            transition: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+        }
+        
+    }
+
+@media (max-width: 576px) {
+    body{
+        overflow-x: hidden;
+    }
+
+    .img #bot{
+        width: 400px;
+        height: 400px;
+    }
+
+    .homeDIV {
+        margin: 3rem 0;
+    }
+
+    .homeBtn{
+        padding: 2rem ;
+        margin: 1rem auto;
+
+    }
+
+    #main .heading{
+        width: 75%;
+        display: flex;
+        justify-content: flex-end;
+        align-content: flex-end;
+        align-items: center;
+        border-radius: 2em;
+    }
+
+    #main h1{
+        font-size:x-large;
+        position: relative;
+        left: 30%;
+    }
+
+    #main .logo{
+        border-radius: 25%;
+        width: 2rem;
+        height: 2rem;
+        margin: 0 1rem;
+        
+    }
+
+    #voiceBot{
+        width: 20rem;
+        height: 20rem;
+        left: 20%;
+    }
+
+    .talkBtn{
+        top: 30rem;
+        left: 25%;
+    }
+
+    .talk{
+        border-radius: 50%; 
+        width: 8rem; 
+        height: 8rem;
+    }
+
+    .content{
+        color: white;
+        position: absolute;
+        top: 60%;
+        left:30% ;
+        width: 50%;
+    }
+
+}
   
