@@ -6,6 +6,24 @@ body {
     z-index: -2;
     
   }
+
+  .homeDIV{
+    position: absolute;
+    left: 25%;
+    text-align: center;
+  }
+
+  .img{
+    animation: bots infinite ease-in-out 4s;
+  }
+
+  .homeDIV a{
+      margin: 0 3rem;
+  }
+
+  .homeBtn{
+      padding: 3rem 7rem ;
+  }
   
   .navbar{
       display: flex;
