@@ -6,6 +6,11 @@ const btn = document.querySelector('.talkBtn');
 const content = document.querySelector('.content');
 const SpokenText = document.querySelector('.spokenText');
 
+
+var today = new Date();
+var mm = String(today.getMonth() + 1).padStart(2, '0');
+var weekday = String(today.getDay()).padStart(2, '0');
+
 const hi =[
     'yes, how can i help you'
 ]
@@ -14,6 +19,22 @@ const greeting = [
     'I am good! how you doin',
     'I am great, what about you'
 ];
+
+const date = [
+    `Today is ${String(today.getDate()).padStart(2, '0')} `
+]
+
+const month = [
+    'january','february','march','april','may','june','july','august','september','october','november','december'
+]
+
+const year = [
+    `, ${today.getFullYear()}`
+]
+
+const day = [
+    'monday','tuesday','wednesday','thursday','friday','saturday','sunday'
+]
 
 const weather = [
     'weather is awesome',
@@ -26,24 +47,14 @@ const Name = [
 ]
 
 const age = [
-    'You ask my boss',
+    'You should ask my boss',
     "it's a secert"
-]
-
-const boyfriend = [
-    'Yes, my boyfriend name is Alex'
 ]
 
 const exit = [
     'okay, be polite',
     'same to you',
     'hope to see you soon'
-]
-
-const love = [
-    'i love you too',
-    'aww you so sweet',
-    'yaa! i kone i love myself too'
 ]
 
 const alexa = [
@@ -116,6 +127,16 @@ function readOutLoad(message){
 
         speech.text = reply;
         content.text = reply;
+    }else if(message.includes('date')){
+        const reply = date + month[mm-01] + year;
+        console.log(reply);
+        speech.text = reply;
+        content.text = reply;
+    }else if(message.includes('day')){
+        const reply = day[weekday-1];
+        console.log(reply);
+        speech.text = reply;
+        content.text = reply;
     }else if(message.includes('weather')){
         const reply = weather[Math.floor(Math.random() * weather.length)];
 
@@ -126,28 +147,13 @@ function readOutLoad(message){
 
         speech.text = reply;
         content.text = reply;
-    }else if(message.includes('do you have a boyfriend')){
-        const reply = boyfriend[Math.floor(Math.random() * boyfriend.length)];
-
-        speech.text = reply;
-        content.text = reply;
     }else if(message.includes('get lost')){
-        const reply = exit[Math.floor(Math.random() * exit.length)];
-
-        speech.text = reply;
-        content.text = reply;
-    }else if(message.includes('fuck off')){
         const reply = exit[Math.floor(Math.random() * exit.length)];
 
         speech.text = reply;
         content.text = reply;
     }else if(message.includes('shut up')){
         const reply = exit[Math.floor(Math.random() * exit.length)];
-
-        speech.text = reply;
-        content.text = reply;
-    }else if(message.includes('love')){
-        const reply = love[Math.floor(Math.random() * love.length)];
 
         speech.text = reply;
         content.text = reply;
@@ -184,3 +190,68 @@ try{
 }catch(e){
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const boyfriend = [
+//     'Yes, my boyfriend name is Alex'
+// ]
+
+
+// const love = [
+//     'i love you too',
+//     'aww you so sweet',
+//     'yaa! i kone i love myself too'
+// ]
+
+// }else if(message.includes('love')){
+//     const reply = love[Math.floor(Math.random() * love.length)];
+
+//     speech.text = reply;
+//     content.text = reply;
+//     else if(message.includes('do you have a boyfriend')){
+//         const reply = boyfriend[Math.floor(Math.random() * boyfriend.length)];
+
+//         speech.text = reply;
+//         content.text = reply;
+//     }
+
+// else if(message.includes('fuck off')){
+//     const reply = exit[Math.floor(Math.random() * exit.length)];
+
+//     speech.text = reply;
+//     content.text = reply;
+// }
