@@ -158,6 +158,13 @@ body {
         width: 50%;
     }
 
+    .spokenText{
+        color: rgb(255, 251, 0);
+        position: relative;
+        left: 45%;
+        width: 50%;
+    }
+
     #voiceBot{
         position: absolute;
         width: 30rem;
@@ -251,6 +258,15 @@ body {
         left:30% ;
         width: 50%;
     }
+
+    .spokenText{
+        color: rgb(255, 251, 0);
+        position: absolute;
+        top: 65%;
+        left:30% ;
+        width: 50%;
+    }
+
 
 }
   

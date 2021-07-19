@@ -1,4 +1,3 @@
-// import analysing from '../images/2voice_recognition_process_by_gleb.gif';
 
 // voice html page working
 
@@ -107,73 +106,87 @@ function readOutLoad(message){
 
         speech.text = reply;
         content.text = reply;
+        SpokenText.textContent = reply;
     }else if(message.includes('hi')){
         const reply = hi[Math.floor(Math.random() * hi.length)];
 
         speech.text = reply;
         content.text = reply;
+        SpokenText.textContent = reply;
     }else if(message.includes('hello')){
         const reply = hi[Math.floor(Math.random() * hi.length)];
 
         speech.text = reply;
         content.text = reply;
+        SpokenText.textContent = reply;
     }else if(message.includes('age')){
         const reply = age[Math.floor(Math.random() * age.length)];
 
         speech.text = reply;
         content.text = reply;
+        SpokenText.textContent = reply;
     }else if(message.includes('old are you')){
         const reply = age[Math.floor(Math.random() * age.length)];
 
         speech.text = reply;
         content.text = reply;
+        SpokenText.textContent = reply;
     }else if(message.includes('date')){
         const reply = date + month[mm-01] + year;
-        console.log(reply);
+
         speech.text = reply;
         content.text = reply;
+        SpokenText.textContent = reply;
     }else if(message.includes('day')){
         const reply = day[weekday-1];
-        console.log(reply);
+
         speech.text = reply;
         content.text = reply;
+        SpokenText.textContent = reply;
     }else if(message.includes('weather')){
         const reply = weather[Math.floor(Math.random() * weather.length)];
 
         speech.text = reply;
         content.text = reply;
+        SpokenText.textContent = reply;
     }else if(message.includes('what is your name')){
         const reply = Name[Math.floor(Math.random() * Name.length)];
 
         speech.text = reply;
         content.text = reply;
+        SpokenText.textContent = reply;
     }else if(message.includes('get lost')){
         const reply = exit[Math.floor(Math.random() * exit.length)];
 
         speech.text = reply;
         content.text = reply;
+        SpokenText.textContent = reply;
     }else if(message.includes('shut up')){
         const reply = exit[Math.floor(Math.random() * exit.length)];
 
         speech.text = reply;
         content.text = reply;
+        SpokenText.textContent = reply;
     }else if(message.includes('Alexa')){
         const reply = alexa[Math.floor(Math.random() * alexa.length)];
 
         speech.text = reply;
         content.text = reply;
+        SpokenText.textContent = reply;
     }else if(message.includes('song')){
         const reply = song[Math.floor(Math.random() * song.length)];
 
         speech.text = reply;
         content.text = reply;
+        SpokenText.textContent = reply;
     }else if(message.includes('bye')){
         const reply = bye[Math.floor(Math.random() * bye.length)];
 
         speech.text = reply;
         content.text = reply;
+        SpokenText.textContent = reply;
     }else{
-        speech.text = "I don't know what to say";
+        speech.text = "Sorry, I have no answer for that";
     }
     
     // speech.text = message;
@@ -185,11 +198,6 @@ function readOutLoad(message){
     window.speechSynthesis.speak(speech);
 }
 
-try{
-
-}catch(e){
-
-}
 
 
 
